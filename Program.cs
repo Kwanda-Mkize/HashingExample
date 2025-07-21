@@ -27,7 +27,7 @@ checkExisting.CheckIfTableExists(connection, "UsersTable");
 
 // // Login up process
 ClientLogin UserLogin = new ClientLogin("Khaya", "Khaya111");
-LoginProcess login = new LoginProcess(connection, UserLogin.Name, UserLogin.Password);
+LoginProcess login = new LoginProcess(connection, UserLogin.Email, UserLogin.Password);
 
 // var dropTableCmd = connection.CreateCommand();
 // dropTableCmd.CommandText = "DROP TABLE IF EXISTS user;";
