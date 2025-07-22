@@ -4,7 +4,7 @@ using Microsoft.Data.Sqlite;
 
 public class SignUpProcess
 {
-  public SignUpProcess(SqliteConnection connection, ClientSignIn user)
+  public SignUpProcess(SqliteConnection connection, Client user)
   {
     var salt = user.ConfirmPassword.Reverse();
     var SignUpPassword = user.ConfirmPassword;

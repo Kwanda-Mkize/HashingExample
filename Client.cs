@@ -3,7 +3,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 using Microsoft.Data.Sqlite;
-public class ClientSignIn
+public class Client
 {
   public Guid Id = Guid.NewGuid();
   public string Email { get; set; }
@@ -13,7 +13,7 @@ public class ClientSignIn
   public string ConfirmPassword { get; set; }
 
 
-  public ClientSignIn(string email, string surname, int age, string password, string confirmPassword)
+  public Client(string email, string surname, int age, string password, string confirmPassword)
   {
 
     Email = email;
@@ -21,6 +21,15 @@ public class ClientSignIn
     Age = age;
     Password = password;
     ConfirmPassword = confirmPassword;
+  }
+
+  public Client(string email, string password)
+  {
+    Email = email;
+    Password = password;
+    Surname = string.Empty;
+    ConfirmPassword = string.Empty;
+    Age = 0;
   }
 
 }

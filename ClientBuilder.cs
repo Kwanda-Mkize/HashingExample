@@ -1,42 +1,42 @@
 using System.Globalization;
 using System.Reflection.Metadata.Ecma335;
 
-public class UserBuilder
+public class ClientBuilder
 {
   private string? _email, _surname, _password, _confirmPassword;
   private int _age;
 
-  public static UserBuilder Builder()
+  public static ClientBuilder Builder()
   {
-    return new UserBuilder();
+    return new ClientBuilder();
   }
 
 
-  public UserBuilder Name(string name)
+  public ClientBuilder Name(string name)
   {
     _email = name;
     return this;
   }
 
-  public UserBuilder Surname(string surname)
+  public ClientBuilder Surname(string surname)
   {
     _surname = surname;
     return this;
   }
 
-  public UserBuilder Age(int age)
+  public ClientBuilder Age(int age)
   {
     _age = age;
     return this;
   }
 
-  public UserBuilder Password(string password)
+  public ClientBuilder Password(string password)
   {
     _password = password;
     return this;
   }
 
-  public UserBuilder ConfirmPassword(string confirmPassword)
+  public ClientBuilder ConfirmPassword(string confirmPassword)
   {
     if (confirmPassword == _password)
     {
@@ -49,9 +49,9 @@ public class UserBuilder
     return this;
   }
 
-  public ClientSignIn Build()
+  public Client Build()
   {
-    return new ClientSignIn(_email ?? string.Empty, _surname ?? string.Empty, _age, _password ?? string.Empty, _confirmPassword ?? string.Empty);
+    return new Client(_email ?? string.Empty, _surname ?? string.Empty, _age, _password ?? string.Empty, _confirmPassword ?? string.Empty);
   }
 
 

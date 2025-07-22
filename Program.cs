@@ -13,12 +13,12 @@ checkExisting.CheckIfTableExists(connection, "UsersTable");
 
 
 // Sign up process
-// ClientSignIn UserSignUp = UserBuilder.Builder()
-// .Name("Khaya")
-// .Surname("Ngcobo")
+// Client UserSignUp = ClientBuilder.Builder()
+// .Name("Onthatile")
+// .Surname("Seodigeng")
 // .Age(23)
-// .Password("Khaya111")
-// .ConfirmPassword("Khaya111")
+// .Password("Seodigeng111")
+// .ConfirmPassword("Seodigeng111")
 // .Build();
 
 // SignUpProcess signUp = new SignUpProcess(connection, UserSignUp);
@@ -26,7 +26,7 @@ checkExisting.CheckIfTableExists(connection, "UsersTable");
 
 
 // // Login up process
-ClientLogin UserLogin = new ClientLogin("Khaya", "Khaya111");
+Client UserLogin = new Client("Onthatile", "Seodigeng111");
 LoginProcess login = new LoginProcess(connection, UserLogin.Email, UserLogin.Password);
 
 // var dropTableCmd = connection.CreateCommand();
